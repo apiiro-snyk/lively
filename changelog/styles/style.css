@@ -1,0 +1,264 @@
+/* Light theme */
+html[data-theme="light"] {
+  color-scheme: light;
+
+  --bodyColor: black;
+  --backgroundColor: #f9f9f9;
+
+  --pColor: rgb(75, 75, 75);
+  --boxShadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  --accentColor: var(--accentColorDark);
+}
+
+/* Dark theme override */
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bodyColor: white;
+  --backgroundColor: #272727;
+
+  --pColor: rgb(220, 220, 220);
+  --boxShadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  --accentColor: var(--accentColorLight);
+}
+
+html {
+  max-width: 900px;
+  margin: auto;
+  color-scheme: dark;
+
+  --accentColorLight: #77cbf9;
+  --accentColorDark: #3b84ac;
+}
+
+body {
+  font-size: 15px;
+  color: var(--bodyColor);
+  background-color: var(--backgroundColor);
+  font-family: "Noto Sans", sans-serif;
+  margin: 1rem 1.5rem;
+  transition: background-color 300ms ease;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.subheader {
+  opacity: 0.75;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+p,
+li {
+  color: var(--pColor);
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+a {
+  color: #77cbf9;
+}
+
+.media-border {
+  height: 459px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--boxShadow);
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 500ms;
+  position: relative;
+  left: 0;
+  top: 0;
+  opacity: 1;
+}
+
+/* 
+Ref: https://uiverse.io/ArturCodeCraft/fresh-hound-11
+Copyright - 2024 ArturCodeCraft (Artur) MIT License
+*/
+/* <main-style> ============================ */
+a.menu__link {
+  text-decoration: none;
+  color: var(--accentColor);
+  line-height: 2;
+  position: relative;
+  padding-right: 4px;
+  /* font-style: italic;*/
+  font-weight: 600;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+.menu__link::before {
+  /* content: '➤'; */
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-top: solid 2px var(--accentColor);
+  border-right: solid 2px var(--accentColor);
+
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transition: transform 300ms ease;
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.menu__link:hover::before {
+  /* transform: translateX(4px); */
+  transform: translateX(4px) translateY(-50%) rotate(45deg);
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+
+    --bodyColor: black;
+    --backgroundColor: #f9f9f9;
+
+    --pColor: rgb(75, 75, 75);
+    --boxShadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    --accentColor: var(--accentColorDark);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+    --bodyColor: white;
+    --backgroundColor: #272727;
+
+    --pColor: rgb(220, 220, 220);
+    --boxShadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    --accentColor: var(--accentColorLight);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    max-width: 100vw;
+  }
+
+  .media-border {
+    width: calc(90vw - 1.5rem);
+    height: 50vw;
+    margin: 0 auto;
+  }
+}
+
+/* Original https://uiverse.io/3bdel3ziz-T/honest-deer-30 */
+/* Copyright - 2024 3bdel3ziz-T (3bdel3zizT)  MIT License */
+/* Heavily modified */
+/* Uses Svgs provided by Material Design Icons Apache 2.0 License */
+/* Theme switch container */
+.switch {
+  --transition: 300ms ease;
+  --color-dark: #0c0f14;
+  --color-darkGray: #272727;
+  --color-offWhite: #959595;
+  --shadow-color: var(--color-dark);
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  height: fit-content;
+  background-color: var(--color-offWhite);
+  border-radius: 5px;
+  padding: 2px;
+  transition: var(--transition);
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Svg styles */
+.switch .svg {
+  transition: var(--transition);
+  position: absolute;
+  left: 5px;
+}
+.switch .moon {
+  width: 24px;
+  fill: white;
+  opacity: 0;
+}
+
+.switch .sun {
+  width: 24px;
+  height: 24px;
+  left: calc(100% - 30px);
+  fill: var(--color-dark);
+  opacity: 1;
+}
+
+/*checkbox styles */
+.switch .circle {
+  appearance: none;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  left: 0;
+  margin-left: 5px;
+  background-color: white;
+  border: 1px solid white;
+  transition: var(--transition);
+  box-shadow: 1px 1px 20px 3px white;
+}
+
+.switch:has(.circle:checked) {
+  background: var(--color-dark);
+}
+
+.switch .circle:hover {
+  margin-left: 8px;
+}
+.switch .circle:checked:hover {
+  margin-left: -5px;
+}
+
+.switch .circle:checked {
+  left: calc(100% - 27px);
+  margin-left: -2px;
+  background: var(--color-darkGray);
+  border-color: var(--color-darkGray);
+  box-shadow: 1px 1px 30px 12px var(--color-darkGray);
+}
+
+.switch:has(.circle:checked) > .sun {
+  opacity: 0;
+}
+
+.switch:has(.circle:checked) > .moon {
+  opacity: 1;
+}

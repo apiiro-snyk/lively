@@ -2,268 +2,203 @@
 <html>
   <head>
     <title>Lively Wallpaper Changelog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <meta charset="utf-8" />
+    <noscript>
+      <style>
+        label.switch {
+          display: none;
+        }
+      </style>
+    </noscript>
+    <script src="./scripts/themeHandler.js"></script>
   </head>
-  <style>
-    html {
-      max-width: 850px;
-      margin: auto;
-      color-scheme: dark;
-    }
-
-    body {
-      font-size: 15px;
-      color: white;
-      background-color: #272727;
-      font-family: "Noto Sans", sans-serif;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 40px;
-    }
-
-    .hero {
-      width: 825px;
-      height: 459px;
-      border-radius: 5px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    h2 {
-      font-weight: 700;
-    }
-
-    h3 {
-      font-weight: 600;
-    }
-
-    a {
-      color: #77cbf9;
-    }
-
-    .media-border {
-      width: 825px;
-      height: 459px;
-      border-radius: 5px;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .video {
-      transition: 0.5s;
-      position: relative;
-      width: 825px;
-      left: 0;
-      top: 0;
-      opacity: 1;
-    }
-
-    @media (prefers-color-scheme: light) {
-      html {
-        color-scheme: light;
-      }
-
-      body {
-        color: black;
-        background-color: #f9f9f9;
-      }
-    }
-    @media (prefers-color-scheme: dark) {
-      html {
-        color-scheme: dark;
-      }
-
-      body {
-        color: white;
-        background-color: #272727;
-        margin: 1rem 1.5rem;
-      }
-    }
-    @media screen and (max-width: 900px) {
-      html {
-        max-width: 100vw;
-      }
-
-      .hero {
-        width: 100%;
-        height: 100%;
-      }
-
-      .media-border {
-        width: 90vw;
-        height: 50vw;
-        margin: 0 auto;
-      }
-
-      .video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  </style>
   <body>
-    <h3 style="opacity: 0.75">26 Oct 2023 | Lively v2.0.7.4 Update</h3>
-    <h1>Windows 11 22H2 Support</h1>
-    <p>This update includes patches for Windows 11 22H2 update and other critical bugfixes.</p>
-
-    <h3>Fixes</h3>
-    <p>Patches for Windows 11 22H2 update.</p>
-    <ul>
-      <li>Fixed wallpaper disappearing when Copilot(Preview) opened.</li>
-      <li>Fixed wallpaper disappearing when Bluetooth device connected.</li>
-      <li>Fixed wallpaper disappearing when USB device connected.</li>
-      <li>Fixed wallpaper disappearing when Display settings changed.</li>
-      <li>Fixed wallpaper disappearing on some systems resuming from sleep.</li>
-      <li>Fixed wallpaper taking focus when starting.</li>
-    </ul>
-
-    <h3>Performance</h3>
-    <ul>
-      <li>Refactoring and updates results in improved UI and Core performance.</li>
-    </ul>
-
-    <h3>Updates</h3>
-    <ul>
-      <li>Updated Mpv player build 20231008.</li>
-      <li>Updated CefSharp browser v111.2.70.</li>
-      <li>Updated .NET Core Runtime v7.0.12.</li>
-      <li>Updated WindowsAppSDK v1.4.231008000.</li>
-      <li>Updated community translations.</li>
-    </ul>
-
-    <h2>My new app just got released! 🥳</h2>
-    <!-- <img class="hero" src="assets/hero_weather.webp" /> -->
-    <div class="media-border">
-      <video id="hero-weather" class="video" loop muted>
-        <source src="assets/hero_weather.mp4" type="video/mp4" />
-      </video>
+    <div class="header">
+      <div>
+        <p class="subheader">23 May 2024 | Lively v2.1.0.4 Update</p>
+        <h1>Better Everything</h1>
+      </div>
     </div>
-    <p>Check out my new native weather app "Lively Weather" powered by DirectX effects:</p>
-    <a href="https://rocksdanister.com/weather" target="_blank">https://rocksdanister.com/weather</a>
-
-    <hr style="opacity: 0.25; margin-top: 25px" />
-
-    <!-- Section 2 -->
-    <h3 style="opacity: 0.75">28 Jun 2023 | Lively v2.0.7.0 Update</h3>
-    <h1>A New Smarter Lively</h1>
     <div class="media-border">
-      <img class="hero" src="assets/hero_art.webp" />
+      <img class="hero" src="assets/latest/hero_art.webp" />
     </div>
-    <p>Lively just got smarter with AI.. introducing first of many to come AI feature "Depth Wallpapers"</p>
-
-    <h3 id="ai-depth-wallpapers">AI Depth Wallpapers</h3>
-    <div class="media-border">
-      <video id="promo-depth-wallpapers" class="video" loop muted>
-        <source src="assets/promo_depthwallpaper.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <p>
-      Using Machine Learning to predict distance of objects from the camera and then use GPU shaders to create 3D image!
-    </p>
-    <p>
-      When it comes to privacy, everything is run 100% local. No network required to run the model, no data sent to the
-      cloud.
-    </p>
-    <p>
-      In my testing works best with scenery, dont be afraid to try different things out and share with the community
-      what you find. You can get some stock images to try here:
-      <a href="https://www.pexels.com" target="_blank">https://www.pexels.com</a>
-    </p>
-
-    <h3 id="new-wallpapers">New "Living Room" Wallpaper</h3>
+    <p style="display: inline-block">This update has been cooking for months.. lots of features and fixes🥳</p>
+    <h3 id="new-wallpapers">New "Music Tunnel" Wallpaper</h3>
     <div class="media-border">
       <video id="promo-new-wallpaper" class="video" loop muted>
-        <source src="assets/promo_livingroom.mp4" type="video/mp4" />
+        <source src="assets/latest/music_tunnel.mp4" type="video/mp4" />
       </video>
     </div>
-    <p>Stylish isometric room showing currently playing music, dynamic lighting that reacts to music bass and more!</p>
-    <p>
-      Preview:
-      <a href="https://youtube.com/watch?v=aIy7hUrmHf4" target="_blank">https://youtube.com/watch?v=aIy7hUrmHf4</a>
-    </p>
+    <p>Mesmerizing infinite music tunnel powered by shaders and Lively API with upto 7 customisation options.</p>
+    <a
+      class="menu__link"
+      title="https://www.youtube.com/watch?v=-0zJkmno8hs"
+      href="https://www.youtube.com/watch?v=-0zJkmno8hs"
+      target="_blank"
+      >See it in action</a
+    >
 
-    <h3 id="color-picker">Fancy ColorPicker</h3>
+    <h3 id="screensaver-enhancements">Better Screensavers</h3>
     <div class="media-border">
-      <video id="promo-color-picker" class="video" loop muted>
-        <source src="assets/promo_colorpicker.mp4" type="video/mp4" />
+      <video id="promo-screensaver-enhancements" class="video" loop muted>
+        <source src="assets/latest/screensaver_ui.mp4" type="video/mp4" />
       </video>
     </div>
-    <p>Updated ColorPicker control, packed with new features.</p>
-    <h3 id="ui-ux">UI/UX</h3>
+    <p>You can now select different screensavers independently of the running wallpaper.</p>
+    <p>Each screensaver can have a custom layout, such as span or duplicate, separate from the wallpaper settings.</p>
+    <p>Screensavers can now run without needing the Lively app to be open. You can use Lively exclusively as a screensaver app! <br>Note: This feature is available only in the installer version of Lively.</br></p>
+    <p>Optimized and reduced Screensaver Plugin size from 30MB to just under 8kb 🪄</p>
+    <a
+    class="menu__link"
+    title="https://github.com/rocksdanister/lively/wiki/Screen-Saver#1-windows-screensaver-file"
+    href="https://github.com/rocksdanister/lively/wiki/Screen-Saver#1-windows-screensaver-file"
+    target="_blank"
+    >Requires new Screensaver Plugin</a
+  >
+
+    <h3 id="control-panel">Better Control Panel</h3>
+    <div class="media-border">
+      <video id="promo-control-panel" class="video" loop muted>
+        <source src="assets/latest/control_panel.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <p>Introducing the new display selector interface that resembles Windows settings. This feature visually shows the positions, sizes and other details of connected displays.</p>
+    <p>Creating this custom control from scratch was quite a task, as there is no stock way to achieve this 😅</p>
+
+    <h3 id="performance">Better Performance - 100,000+ Controls!</h3>
+    <div class="media-border">
+      <video id="promo-performance" class="video" loop muted>
+        <source src="assets/latest/customise_performance.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <p>The wallpaper customization menu code has been completely rewritten for better performance and easier maintenance.</p>
+    <p>Thanks to virtualization and templating techniques, the new system has been tested to handle over 100,000 controls effortlessly.</p>
+
+    <h3 id="updater">Better Update Experience</h3>
+    <div class="media-border">
+      <video id="promo-updater" class="video" loop muted>
+        <source src="assets/latest/updater.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <p>The app updater (installer) has been better integrated into the main interface, featuring simple and non-distracting notifications.</p>
+    <p>The latest update information can now be viewed directly from within the app.</p>
+
+    <h3 id="scaler">Better Wallpaper Scaling</h3>
+    <div class="media-border">
+      <video id="promo-scaler" class="video" loop muted>
+        <source src="assets/latest/media_scaler.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <p>
+      For better flexibility and user control wallpaper scaler settings are now applied for individual media file and wallpaper layout like span and duplicate.
+    </p>
+    <p>This feature is only available when Mpv video player is selected.</p>
+
+    <h3 id="folderDropdown">Better FolderDropdown Control</h3>
+    <div class="media-border">
+      <video id="promo-folderDropdown" class="video" loop muted>
+        <source src="assets/latest/folderDropdown.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <p>Redesigned FolderDropdown control with file preview and deletion support.</p>
+    <p>Preview is supported for most popular formats as it is generated from system shell.</p>
+
+    <h3 id="patreon">Patreon Supporters <3</h3>
+    <div class="media-border">
+      <video id="promo-patreon" class="video" loop muted>
+        <source src="assets/latest/patreon_supporters.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <p>Just a little something to show appreciation.</p>
+
+    <h3 id="misc">Miscellaneous</h3>
+    <div class="media-border">
+      <video id="promo-ui-ux" class="video" loop muted>
+        <source src="assets/latest/tray_light.mp4" type="video/mp4" />
+      </video>
+    </div>
     <ul>
-      <li>Tray customize menu now takes display scaling into account.</li>
-      <li>Refactoring and improvements should yield better performance and consistency.</li>
+      <li>New light themed system-tray menu.</li>
+      <li>While installing application wallpaper now there is option to add launch arguments.</li>
+      <li>Modernized the interface with new Segmented control.</li>
     </ul>
-    <h3 id="enhancements">Enhancements</h3>
+
+    <h3 id="24h2">Windows 24H2 Support</h3>
     <ul>
-      <li>Added .JFIF image support.</li>
-      <li>LivelyProperties now support tooltips, display helpful information about the setting on hover.</li>
-      Learn more:
-      <a href="https://github.com/rocksdanister/lively/wiki/Web-Guide-IV-:-Interaction" target="_blank"
-        >https://github.com/rocksdanister/lively/wiki/Web-Guide-IV-:-Interaction</a
+      <li>
+        Upgrades have been implemented to ensure compatibility with the upcoming Windows 11 24H2 release.
+        <br />Additionally, these enhancements are expected to function with insider versions of Windows; however,
+        please note that insider builds are not officially supported.<br />
+      </li>
+    </ul>
+
+    <h3 id="64bit">64-bit Architecture</h3>
+    <ul>
+      <li>Lively is transitioning from x86 (32-bit) to x64 (64-bit) process architecture.</li>
+      <li>
+        This change will enhance application performance by better utilizing system resources.<br />
+        If your current installation has admin privileges, you may receive a one-time prompt asking for the install
+        type. This is normal.<br />
+        A restart may be requested at the end of the installation process. While not strictly required, it is
+        recommended.<br />
+        For backward compatibility, the installer filename remains listed as x86.<br />
+      </li>
+    </ul>
+
+    <h3 id="commandline">Commandline</h3>
+    <ul>
+      <li>New <b>random</b> setwp option which sets a random wallpaper from library.</li>
+      <a class="menu__link" href="https://github.com/rocksdanister/lively/wiki/Command-Line-Controls#set-wallpaper"
+        >Show documentation</a
       >
+      <li>Setting wallpaper not present in library will now get auto imported if its media file.</li>
+      <li>Sending commands directly through application executable is now instant, 1s delay is gone.</li>
     </ul>
+
     <h3 id="fixes">Fixes</h3>
     <ul>
-      <li>Fixed wallpaper FileDialog not opening when the program is Run as administrator.</li>
-      <li>Fixed media not changing in music wallpapers when the new track is from the same artist.</li>
+      <li>Fixed close wallpaper button disabled in span layout when non-primary display was selected previously.</li>
+      <li>Fixed video wallpaper position not synchronized on startup in duplicate layout.</li>
+      <li>Fixed Customize wallpaper not applying to selected screen if wallpaper is not running.</li>
+      <li>Fixed application crashing when adding some program to wallpaper pause rules.</li>
+      <li>Fixed high system resource usage during update download.</li>
+      <li>
+        Added Unicode support for LivelyProperties Textbox and FolderDropdown. For example, now you can interact with
+        text and filenames with Chinese characters.
+      </li>
+      <li>
+        When a unique DeviceId is not available for display, a hashcode is generated which should resolve some
+        display-related wallpaper bugs.
+      </li>
+      <li>
+        Optional <code>TaskbarCrashTimeOutDelay</code> settings variable to configure the check time between Taskbar
+        Explorer process crash.
+      </li>
     </ul>
     <h3 id="translation">Translation</h3>
     <ul>
-      <li>Updated translations.</li>
-      <li>
-        The new features may not be translated to all the languages on first release due to the nature of community
-        translations.
-      </li>
-      You can help translating, learn more:
-      <a href="https://crowdin.com/project/lively-wallpaper" target="_blank"
-        >https://crowdin.com/project/lively-wallpaper</a
-      >
+      <li>Added Belarusian, Galician, Kazakh, Burmese and Slovak languages.</li>
+      <li>Updated community translations.</li>
     </ul>
     <h3 id="updates">Updates</h3>
     <ul>
+      <li>Upgraded .NET runtime to 8.0.5 (x64).</li>
+      <li>Updated WindowsAppSDK v1.5.240404000.</li>
+      <li>Upgraded Visual C++ Redistributable v2015-2022 (x64).</li>
       <li>Updated Mpv player.</li>
+      <li>Updated CEF player.</li>
       <li>Updated dependencies.</li>
-      <li>Updated .NET Desktop Runtime v7.0.7</li>
-      <li>Updated WindowsAppSDK v1.3.2</li>
     </ul>
   </body>
   <div class="footer">
-    <a href="https://rocksdanister.com/lively" title="https://rocksdanister.com/lively">Home</a>
+    <a class="menu__link" href="home.html">Previous releases</a>
   </div>
-  <script>
-    let videos = document.getElementsByClassName("video");
-    function callbackFunc(entries, observer) {
-      entries.forEach((entry) => {
-        for (let i = 0; i < videos.length; i++) {
-          if (entry.target.id != videos[i].id) continue;
-
-          //If more than half of video visible, play
-          if (entry.intersectionRatio >= 0.75) {
-            videos[i].play();
-            videos[i].style.filter = "";
-          } else {
-            videos[i].pause();
-            videos[i].style.filter = "brightness(50%)";
-          }
-        }
-      });
-    }
-
-    let observer = new IntersectionObserver(
-      callbackFunc,
-      (options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: [0.25, 0.5, 0.75],
-      })
-    );
-    [...videos].forEach((x) => observer.observe(x));
-  </script>
+  <script src="scripts/script.js"></script>
 </html>
